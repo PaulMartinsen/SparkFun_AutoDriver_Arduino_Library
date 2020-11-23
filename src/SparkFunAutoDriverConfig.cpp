@@ -92,6 +92,16 @@ float AutoDriver::getFullSpeed()
   return FSParse(getParam(FS_SPD));
 }
 
+float AutoDriver::getIntersectSpeed()
+{
+  return intSpdParse(getParam(INT_SPD));
+}
+
+int AutoDriver::getStallThreshold()
+{
+  return getParam(STALL_TH);
+}
+
 // Set the acceleration rate, in steps per second per second. This value is
 //  converted to a dSPIN friendly value. Any value larger than 29802 will
 //  disable acceleration, putting the chip in "infinite" acceleration mode.

@@ -19,6 +19,10 @@ class AutoDriver
     // These are super-common things to do: checking if the device is busy,
     //  and checking the status of the device. We make a couple of functions
     //  for that.
+    bool isBusy() 
+    {
+      return busyCheck() != 0;
+    }
     int busyCheck();
     int getStatus();
     
@@ -56,6 +60,7 @@ class AutoDriver
     float getMaxSpeed();
     float getMinSpeed();
     float getFullSpeed();
+    float getIntersectSpeed();
     float getAcc();
     float getDec();
     byte getOCThreshold();
@@ -70,6 +75,7 @@ class AutoDriver
     byte getDecKVAL();
     byte getRunKVAL();
     byte getHoldKVAL();
+    int getStallThreshold();
     
     // ...and now, operational commands.
     long getPos();
