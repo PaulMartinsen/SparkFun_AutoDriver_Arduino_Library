@@ -238,3 +238,9 @@ int AutoDriver::getStatus()
   bytePointer[0] = SPIXfer(0);
   return temp;
 }
+
+// Determines if the switch input is closed (shorted). 
+bool AutoDriver::isSwitchClosed()
+{
+  return (getStatus() & STATUS_SW_F) != 0;
+}

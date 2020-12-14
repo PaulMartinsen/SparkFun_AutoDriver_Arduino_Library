@@ -25,6 +25,8 @@ class AutoDriver
     }
     int busyCheck();
     int getStatus();
+
+    bool isSwitchClosed();
     
     // Some users will want to do things other than what we explicitly provide
     //  nice functions for; give them unrestricted access to the parameter
